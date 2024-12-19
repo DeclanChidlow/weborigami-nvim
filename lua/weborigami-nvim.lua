@@ -5,6 +5,10 @@ local function setup_filetype()
 		extension = {
 			ori = 'origami',
 		},
+		pattern = {
+			['.*%.ori%.md'] = 'origamimarkdown',
+			['.*%.ori%.html'] = 'origamihtml',
+		},
 	})
 end
 
