@@ -1,6 +1,6 @@
 local M = {}
 
-local function detect_filetype()
+local function setup_filetype()
 	vim.filetype.add({
 		extension = {
 			ori = 'origami',
@@ -9,7 +9,12 @@ local function detect_filetype()
 end
 
 local function setup_syntax()
-	vim.cmd([[
+	local syntax_dir = vim.fn.stdpath('config') .. '/syntax'
+	if vim.fn.isdirectory(syntax_dir) == 0 then
+		vim.fn.mkdir(syntax_dir, 'p')
+	end
+
+	local syntax_commands = [[
     if exists("b:current_syntax")
       finish
     endif
@@ -76,13 +81,18 @@ local function setup_syntax()
     highlight default link origamiVariable Identifier
 
     let b:current_syntax = "origami"
-  ]])
+	]]
+
+	local syntax_file = syntax_dir .. '/origami.vim'
+	local file = io.open(syntax_file, 'w')
+	if file then
+		file:write(syntax_commands)
+		file:close()
+	end
 end
 
-function M.setup(opts)
-	opts = opts or {}
-
-	detect_filetype()
+function M.setup()
+	setup_filetype()
 	setup_syntax()
 end
 
