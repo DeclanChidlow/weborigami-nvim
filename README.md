@@ -1,20 +1,27 @@
 <div align="center">
 <h1>
-  TemplateRepo
+  Web Origami Neovim Plugin
   
-  [![Stars](https://img.shields.io/github/stars/DeclanChidlow/TemplateRepo?style=flat-square&logoColor=white)](https://github.com/DeclanChidlow/TemplateRepo/stargazers)
-  [![Forks](https://img.shields.io/github/forks/DeclanChidlow/TemplateRepo?style=flat-square&logoColor=white)](https://github.com/DeclanChidlow/TemplateRepo/network/members)
-  [![Pull Requests](https://img.shields.io/github/issues-pr/DeclanChidlow/TemplateRepo?style=flat-square&logoColor=white)](https://github.com/DeclanChidlow/TemplateRepo/pulls)
-  [![Issues](https://img.shields.io/github/issues/DeclanChidlow/TemplateRepo?style=flat-square&logoColor=white)](https://github.com/DeclanChidlow/TemplateRepo/issues)
-  [![Contributors](https://img.shields.io/github/contributors/DeclanChidlow/TemplateRepo?style=flat-square&logoColor=white)](https://github.com/DeclanChidlow/TemplateRepo/graphs/contributors)
-  [![Licence](https://img.shields.io/github/license/DeclanChidlow/TemplateRepo?style=flat-square&logoColor=white)](https://github.com/DeclanChidlow/TemplateRepo/blob/main/LICENCE)
+  [![Stars](https://img.shields.io/github/stars/DeclanChidlow/weborigami-nvim?style=flat-square&logoColor=white)](https://github.com/DeclanChidlow/weborigami-nvim/stargazers)
+  [![Forks](https://img.shields.io/github/forks/DeclanChidlow/weborigami-nvim?style=flat-square&logoColor=white)](https://github.com/DeclanChidlow/weborigami-nvim/network/members)
+  [![Pull Requests](https://img.shields.io/github/issues-pr/DeclanChidlow/weborigami-nvim?style=flat-square&logoColor=white)](https://github.com/DeclanChidlow/weborigami-nvim/pulls)
+  [![Issues](https://img.shields.io/github/issues/DeclanChidlow/weborigami-nvim?style=flat-square&logoColor=white)](https://github.com/DeclanChidlow/weborigami-nvim/issues)
+  [![Contributors](https://img.shields.io/github/contributors/DeclanChidlow/weborigami-nvim?style=flat-square&logoColor=white)](https://github.com/DeclanChidlow/weborigami-nvim/graphs/contributors)
+  [![Licence](https://img.shields.io/github/license/DeclanChidlow/weborigami-nvim?style=flat-square&logoColor=white)](https://github.com/DeclanChidlow/weborigami-nvim/blob/main/LICENCE)
 </h1>
-Brief description of repository
+Neovim plugin to make working with Web Origami nicer
 </div>
 <br/>
 
-Larger description of repository.
+Currently this plugin only provides rudimentary syntax highlighting for [Origami](https://weborigami.org).
 
-## Badge Setup
+## Installation
 
-Search and replace all instances of "DeclanChidlow/TemplateRepo" with your required details. In Neovim this can be done with `:%s/DeclanChidlow/your_username/g` then `:%s/TemplateRepo/your_repo_name/g`.
+Using [lazy.nvim](https://github.com/folke/lazy.nvim):
+
+```lua
+return {
+	"DeclanChidlow/weborigami-nvim",
+	opts = {}
+}
+```
